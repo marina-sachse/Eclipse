@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;HausaufgabenVier.KreiseZeichnen&apos; to &apos;Kreise&apos;&#x0D;&#x0A;- Original project: &apos;P2_WS17_18&apos;&#x0D;&#x0A;- Original element: &apos;HausaufgabenVier.KreiseZeichnen&apos;&#x0D;&#x0A;- Renamed element: &apos;HausaufgabenVier.Kreise&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;KreiseZeichnen&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;HausaufgabenVier{KreiseZeichnen.java[KreiseZeichnen" matchStrategy="1" name="Kreise" qualified="false" references="true" similarDeclarations="false" stamp="1508750795631" textual="false" version="1.0"/>
+</session>

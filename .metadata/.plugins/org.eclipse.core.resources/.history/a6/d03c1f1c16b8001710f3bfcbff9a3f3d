@@ -1,0 +1,44 @@
+package HausaufgabenVier;
+
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.JPanel;
+
+public class ZeichneBild extends JPanel{
+	
+	private Image image;
+	
+	public ZeichneBild(Image image) {
+		
+		setImage(image);
+	}
+	
+	public void setImage(Image image) {
+	      this.image = image;
+	      repaint();
+	   }
+	
+	@Override
+	public Dimension getPreferredSize() {
+		
+		//return super.getPreferredSize();
+		return new Dimension(image.getWidth(this), image.getHeight(this));
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		
+		super.paintComponent(g);
+//		Image image = Toolkit.getDefaultToolkit().getImage("C:/Users/Marina/Pictures/Camera Roll/Der Tod/maxresdefault.jpg");
+		if (image != null) {
+			g.drawImage(image, 0, 0, this);
+		}
+		else
+			System.out.println("kein bild da");
+		
+	}
+	
+}

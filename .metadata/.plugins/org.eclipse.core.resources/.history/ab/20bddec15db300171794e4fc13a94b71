@@ -1,0 +1,40 @@
+package HausaufgabenDrei;
+
+import java.awt.FlowLayout;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+
+public class Jukebox extends JFrame{
+	
+	private DefaultListModel<String> listModel;
+	private JList<String> list;
+	
+	public Jukebox(){
+		setTitle("Songs");
+		setLayout(new FlowLayout());
+		
+		JButton add = new JButton("Add");
+		JButton load = new JButton("Load");
+		JButton save = new JButton("Save");
+		listModel = new DefaultListModel<>();
+		list = new JList<>(listModel);
+		
+		add(list);
+		add(add);
+		add(load);
+		add(save);
+		
+		pack();
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		new Jukebox();
+	}
+}

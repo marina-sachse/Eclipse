@@ -1,0 +1,37 @@
+package HausaufgabenDrei;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class DialogFenster extends JDialog {
+	
+	private Boolean isOkClicked;
+
+	public DialogFenster(JFrame parent){
+		super(parent, "Add Song", true);
+		setLayout(new FlowLayout());
+		JTextField titel = new JTextField("Titel eingeben", 10);
+		JTextField time = new JTextField("Länge eingeben", 10);
+		JButton add = new JButton("Add");
+		JButton cancel = new JButton("Cancel");
+		add(titel);
+		add(time);
+		add(add);
+		add(cancel);
+		add.addActionListener(e ->{
+			dispose();
+			isOkClicked = true;
+		});
+		cancel.addActionListener(e ->{
+			dispose();
+			isOkClicked = false;
+		});
+	
+	}
+	
+	
+}

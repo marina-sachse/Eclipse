@@ -1,0 +1,14 @@
+package HausaufgabenDrei;
+
+import javax.swing.JFrame;
+
+public class Jukebox extends JFrame{
+	
+	public Jukebox(){
+		JFrame frame = new JFrame("Songs");
+		
+		pack();
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+}
