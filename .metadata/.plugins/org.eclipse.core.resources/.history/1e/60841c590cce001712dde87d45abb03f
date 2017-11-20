@@ -1,0 +1,63 @@
+package HausaufgabenSieben;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class ClockTask implements Runnable, KeyListener{
+	
+	private boolean stopRequest;
+	private double sekunden;
+	private Thread thread = new Thread(this);
+	
+	public ClockTask() {
+		stopRequest = true;
+		sekunden = 0.0;
+//		thread.start();
+	}
+	
+	@Override
+	public void run() {
+		while (!stopRequest){
+			try{
+				Thread.sleep(1000);
+				sekunden++;
+				System.out.println(sekunden);
+				}
+			catch (InterruptedException e) {
+				System.out.println("geht nicht");
+			}
+		}
+	}
+	
+	public void stop() {
+		// TODO Auto-generated method stub
+		stopRequest = true;
+	}
+	
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		if(stopRequest){
+			stopRequest = false;
+			thread.start();
+		}
+		else{
+			stopRequest = true;
+			stop();
+		}
+	}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("nichts");
+	}
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("passiert");
+	}
+	
+	public static void main(String[] args) {
+		new ClockTask();
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;anzahlSitze&apos; in &apos;HausaufgabenSieben.Sitze&apos; to &apos;groeße&apos;&#x0D;&#x0A;- Original project: &apos;P2_WS17_18&apos;&#x0D;&#x0A;- Original element: &apos;HausaufgabenSieben.Sitze.anzahlSitze&apos;&#x0D;&#x0A;- Renamed element: &apos;HausaufgabenSieben.Sitze.groeße&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;anzahlSitze&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;HausaufgabenSieben{Sitze.java[Sitze^anzahlSitze" name="groeße" references="true" setter="false" stamp="1511209701772" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,49 @@
+package HausaufgabenSieben;
+
+import java.util.Arrays;
+
+public class Sitze {
+	
+	private Boolean []anzahlSitze;
+	private int freieSitze;
+
+	public Sitze(int gesamtSitze) {
+		// TODO Auto-generated constructor stub
+		anzahlSitze = new Boolean[gesamtSitze];
+		Arrays.fill(anzahlSitze, false);
+		anzahlSitze[20]= true;
+		freieSitze = gesamtSitze;
+	}
+	
+	private boolean reservieren(int ausgewaehlterSitz) {
+		// TODO Auto-generated method stub
+		if(!anzahlSitze[ausgewaehlterSitz]){
+			anzahlSitze[ausgewaehlterSitz]= true;
+			freieSitze--;
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+	public Boolean[] getAnzahlSitze() {
+		return anzahlSitze;
+	}
+
+	public int getFreieSitze() {
+		return freieSitze;
+	}
+
+	public static void main(String[] args) {
+		Sitze sitze = new Sitze(40);
+		int sitzNummer = 20;
+		if(sitze.reservieren(sitzNummer)){
+			System.out.println("Sitz: " + sitzNummer + " wurde gebucht");
+		}
+		else{
+			System.out.println(sitze.getFreieSitze() + " von " + 
+					sitze.getAnzahlSitze() + " sind noch frei");
+		}
+	}
+}

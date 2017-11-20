@@ -1,0 +1,44 @@
+package HausaufgabenSieben;
+
+public class ClockTask implements Runnable{
+	
+	private boolean stopRequest;
+	private double sekunden;
+	private Thread thread = new Thread(this);
+	
+	public ClockTask() {
+		// TODO Auto-generated constructor stub
+		stopRequest = false;
+		sekunden = 0.0;
+		thread.start();
+		if(sekunden == 10){
+			stop();
+		}
+
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while (!stopRequest){
+			try{
+				Thread.sleep(1000);
+				sekunden++;
+				System.out.println(sekunden);
+				}
+			catch (InterruptedException e) {
+				// TODO: handle exception
+				System.out.println("geht nicht");
+			}
+		}
+	}
+	
+	private void stop() {
+		// TODO Auto-generated method stub
+		stopRequest = true;
+	}
+	
+	public static void main(String[] args) {
+		new ClockTask();
+	}
+}
