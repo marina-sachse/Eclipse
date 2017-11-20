@@ -1,0 +1,32 @@
+package HausaufgabenFuenf;
+
+import java.awt.Color;
+
+import javax.swing.JTextField;
+import javax.swing.JWindow;
+import javax.swing.Timer;
+
+public class Inizializing extends JWindow{
+	
+	private Timer timer;
+	
+	public Inizializing() {
+
+		getContentPane().setBackground(Color.YELLOW);
+		JTextField iniz = new JTextField("inizializing");
+		add(iniz);
+		timer = new Timer(20, (e)->{
+			
+		});
+
+		
+		setSize(200, 200);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+
+		new Inizializing();
+	}
+
+}

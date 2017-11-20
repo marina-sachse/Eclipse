@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;HausaufgabenFuenf.JWindow&apos; to &apos;Inizializing&apos;&#x0D;&#x0A;- Original project: &apos;P2_WS17_18&apos;&#x0D;&#x0A;- Original element: &apos;HausaufgabenFuenf.JWindow&apos;&#x0D;&#x0A;- Renamed element: &apos;HausaufgabenFuenf.Inizializing&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;JWindow&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;HausaufgabenFuenf{JWindow.java[JWindow" matchStrategy="1" name="Inizializing" qualified="false" references="true" similarDeclarations="false" stamp="1509882960006" textual="false" version="1.0"/>
+</session>

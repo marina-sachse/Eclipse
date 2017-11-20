@@ -15,7 +15,6 @@ INDEX VERSION 1.130+C:\Users\Marina\Documents\GitHub\Eclipse\.metadata\.plugins\
 148409970.index
 1520797343.index
 1484906476.index
-949771158.index
 194259052.index
 922380862.index
 628019425.index

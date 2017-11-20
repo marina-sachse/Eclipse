@@ -12,6 +12,8 @@ import javax.swing.JMenuItem;
 
 public class BildLaden extends JFrame{
 	
+	private Image image;
+	
 	public BildLaden() {
 
 		JMenuBar bar = new JMenuBar();
@@ -21,10 +23,7 @@ public class BildLaden extends JFrame{
 		menu.add(item);
 		bar.add(menu);
 		setJMenuBar(bar);
-		
-		/*ZeichneBild bild = new ZeichneBild();
-		add(bild);
-*/		
+				
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pack();
 		setSize(300, 300);
@@ -39,7 +38,7 @@ public class BildLaden extends JFrame{
 			File file = fileChooser.getSelectedFile();
 			
 				try {
-					Image image = ImageIO.read(file);
+					image = ImageIO.read(file);
 					ZeichneBild bild = new ZeichneBild(image);
 					add(bild);
 				} catch (Exception e) {

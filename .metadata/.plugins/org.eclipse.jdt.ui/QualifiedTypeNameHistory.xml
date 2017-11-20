@@ -16,7 +16,6 @@
 <fullyQualifiedTypeName name="javax.swing.JDialog"/>
 <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
-<fullyQualifiedTypeName name="javax.swing.JTextField"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="HausaufgabenDrei.Jukebox"/>
 <fullyQualifiedTypeName name="HausaufgabenDrei.DialogFenster"/>
@@ -24,17 +23,21 @@
 <fullyQualifiedTypeName name="HausaufgabenVier.Schachbrett"/>
 <fullyQualifiedTypeName name="HausaufgabenVier.ZeichneSchachbrett"/>
 <fullyQualifiedTypeName name="HausaufgabenVier.KreiseZeichnen"/>
-<fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="HausaufgabenVier.BildLaden"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JMenu"/>
 <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
-<fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
 <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="HausaufgabenVier.ZeichneBild"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
+<fullyQualifiedTypeName name="javax.swing.JWindow"/>
+<fullyQualifiedTypeName name="HausaufgabenFuenf.Inizializing"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.Timer"/>
 </qualifiedTypeNameHistroy>
