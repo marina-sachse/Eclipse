@@ -1,0 +1,31 @@
+package Übungen;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class MainZeichnen extends JFrame{
+
+	public MainZeichnen() {
+		Schach schach = new Schach();
+		ZufälligeKreise kreis = new ZufälligeKreise();
+		KreisGroesseAendern aendern = new KreisGroesseAendern();
+		ImageLaden bild = new ImageLaden();
+		
+		add(schach);
+		add(kreis);
+		add(aendern);
+		add(bild);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(500, 500);;
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new MainZeichnen();
+	}
+
+}

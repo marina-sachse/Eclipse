@@ -1,0 +1,28 @@
+package Übungen;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class ZahlenEinlesen {
+	
+	private Set<Integer> posNum;
+	private Scanner scan;
+	
+	
+	public ZahlenEinlesen() {
+		scan= new Scanner(System.in);
+		posNum= new HashSet<>();
+		System.out.println("Füge Positive Zahlen hinzu \nbei -1 wird das Program beendet");
+		while(true){
+			if(scan.hasNext()){
+				posNum.add(scan.nextInt());
+				System.out.println(posNum);
+			}
+			break;
+		}
+	}
+	public static void main(String[] args) {
+		new ZahlenEinlesen();
+	}
+}

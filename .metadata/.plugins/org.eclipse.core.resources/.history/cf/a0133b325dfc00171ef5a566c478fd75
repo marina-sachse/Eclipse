@@ -1,0 +1,35 @@
+package Übungen;
+
+import java.awt.BorderLayout;
+
+import javax.swing.Box;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+
+public class Jukebox extends JFrame{
+
+	public Jukebox() {
+	//	DefaultListModel<Song> model = new DefaultListModel<>();
+		JList<Song> list = new JList<>(new DefaultListModel<Song>());
+		JButton add = new JButton("add");
+		JButton load = new JButton("Load");
+		JButton save = new JButton("save");
+		Box box = Box.createVerticalBox();
+		
+		box.add(add);
+		box.add(load);
+		box.add(save);
+		add(list);
+		add(box, BorderLayout.EAST);
+			
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		pack();
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Jukebox();
+	}
+}

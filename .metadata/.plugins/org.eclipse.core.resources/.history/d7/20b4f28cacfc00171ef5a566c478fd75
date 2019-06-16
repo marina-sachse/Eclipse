@@ -1,0 +1,28 @@
+package Übungen;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JWindow;
+import javax.swing.Timer;
+
+public class Laden extends JWindow{
+	int sec = 0;
+	public Laden() {
+		Timer time = new Timer(100, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				sec++;
+				System.out.println(sec);	
+			}
+		});
+		time.start();
+		if(sec == 5){
+			time.stop();
+		}
+	}
+	public static void main(String[] args) {
+		new Laden();
+	}
+}

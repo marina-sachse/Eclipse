@@ -1,0 +1,54 @@
+package Übungen;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.Timer;
+
+public class LadeMain extends JFrame{
+	
+	private Timer timer;
+	private JLabel geladen;
+	private int count;
+	private Laden laden;
+
+	public LadeMain() {
+		//geladen.setText("ich wurde geladen");
+		laden = new Laden();
+		timer = new Timer(2000, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//count++;
+				laden.dispose();
+				showMainWindow();
+				timer.stop();
+			}
+		});
+		timer.start();
+		//timer.setRepeats(false);
+		
+		/*add(geladen);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		pack()*/;
+	} 
+	
+	public void showMainWindow(){
+		//geladen.setText("ich wurde geladen");
+		
+		//add(geladen);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(200, 200);;
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new LadeMain();
+	}
+
+}

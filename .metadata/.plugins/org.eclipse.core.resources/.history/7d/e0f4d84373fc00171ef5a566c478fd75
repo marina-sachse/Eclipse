@@ -1,0 +1,47 @@
+package Übungen;
+
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Insets;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
+
+public class Schach extends JPanel{
+	
+	private boolean color= false;
+	
+	public Schach() {
+		setPreferredSize(new Dimension(55, 55));
+		setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 5));
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		for(int i = 0; i< 451; i += 50){
+			g.setColor(Color.WHITE);
+			for (int j = 0; j < 451; j += 50) {
+				g.fillRect(i, j, 50, 50);
+				if(g.getColor()== Color.WHITE){
+					g.setColor(Color.BLACK);
+					color = false;
+					System.out.println("if");
+				}
+				else{
+					g.setColor(Color.WHITE);
+					color = true;
+					System.out.println("else");
+				}
+			}			
+		}	
+	}
+
+	/*public static void main(String[] args) {
+		new Schach();
+	}*/
+
+}

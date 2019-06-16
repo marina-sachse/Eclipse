@@ -1,0 +1,21 @@
+package Übungen;
+
+import javax.swing.JFrame;
+
+public class MainZeichnen extends JFrame{
+
+	public MainZeichnen() {
+		Schach schach = new Schach();
+		ZufälligeKreise kreis = new ZufälligeKreise();
+		add(schach);
+		add(kreis);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(500, 500);;
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new MainZeichnen();
+	}
+
+}

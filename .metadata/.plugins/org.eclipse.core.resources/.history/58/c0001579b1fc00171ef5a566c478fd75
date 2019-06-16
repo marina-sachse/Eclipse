@@ -1,0 +1,51 @@
+package Übungen;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JWindow;
+import javax.swing.Timer;
+
+public class Laden extends JFrame{
+	int sec = 0;
+	JLabel test; 
+	
+	public int getSec() {
+		return sec;
+	}
+	
+	@Override
+	public String toString() {
+		return "Laden [sec=" + sec + "]";
+	}
+
+	public Laden() {
+		
+		
+		Timer time = new Timer(1000, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				sec++;
+				test = new JLabel(String.valueOf(sec));
+				add(test);
+				repaint();
+				//System.out.println(sec);	
+			}
+		});
+		time.start();
+		if(sec == 5){
+			time.stop();
+		}
+		
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(200, 200);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new Laden();
+	}
+}

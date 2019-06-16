@@ -1,0 +1,21 @@
+package Übungen;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class ZufälligeKreise extends JPanel{
+	@Override
+	protected void paintComponent(Graphics g) {
+		//super.paintComponent(g);
+	//	for(int i = 0; i < 1000; i++){
+			int x = (int)(Math.random()*255);
+			int y = (int)(Math.random()*255);
+			int z = (int)(Math.random()*255);
+			g.fillOval(x, y, 20, 20);
+			g.setColor(new Color(x, y, z));
+		}
+		
+	//}
+}

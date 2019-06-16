@@ -1,0 +1,22 @@
+package Übungen;
+
+import java.util.Scanner;
+import java.util.Set;
+
+public class ZahlenEinlesen {
+	
+	private Set<Integer> posNum;
+	private Scanner scan;
+	
+	
+	public ZahlenEinlesen() {
+		scan= new Scanner(System.in);
+		System.out.println("Füge Positive Zahlen hinzu \n bei -1 wird das Program beendet");
+		while(true){
+			break;
+		}
+	}
+	public static void main(String[] args) {
+		new ZahlenEinlesen();
+	}
+}

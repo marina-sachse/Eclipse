@@ -1,0 +1,36 @@
+package Übungen;
+
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
+import javax.swing.JPanel;
+
+public class ImageLaden extends JPanel{
+	
+	private BufferedImage img;
+	private File file;
+	
+	public ImageLaden() {
+		JFileChooser chooser = new JFileChooser("C:/Users/Marina/Pictures/Camera Roll/Schnappschüsse");
+		if(chooser.showOpenDialog(null)!= chooser.APPROVE_OPTION){
+				try {
+				file = chooser.getSelectedFile();
+				img = ImageIO.read(file);
+				repaint();
+			} catch (Exception e) {
+				System.out.println("nein");
+			}
+		}
+		
+		
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.drawImage(img, 0, 0, null);
+	}
+}

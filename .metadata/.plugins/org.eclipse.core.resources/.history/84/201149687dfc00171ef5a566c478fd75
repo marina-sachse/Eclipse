@@ -1,0 +1,35 @@
+package Übungen;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.SwingConstants;
+
+public class KreisGroesseAendern extends JPanel{
+	
+	private int d = 20;
+	
+	public KreisGroesseAendern() {
+		setBackground(Color.RED);
+		JSlider slider = new JSlider(SwingConstants.HORIZONTAL, 1, 50, 20);
+		slider.addChangeListener(e->{
+			d = slider.getValue();
+			repaint();
+			System.out.println(slider.getValue());
+		});
+		add(slider);
+	}
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		//g.fillRect(0, 0, 500, 500);
+		int y = getSize().height - getInsets().top - getInsets().bottom;
+		int x = getSize().width - getInsets().left - getInsets().right;
+		g.setColor(Color.GREEN);
+		g.fillOval(20, 20, d, d);
+	}
+}

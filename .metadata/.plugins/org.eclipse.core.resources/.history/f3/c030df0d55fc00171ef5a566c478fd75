@@ -1,0 +1,44 @@
+package Übungen;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFormattedTextField;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class NeuerSong extends JDialog{
+	
+	//private Song song;
+	
+	public NeuerSong() {
+		JButton ok = new JButton("ok");
+		JTextField enterTitel = new JTextField("titel");
+		JLabel titel = new JLabel("titel eingeben: ");
+		//JTextField enterZeit = new JTextField("sec");
+		JLabel zeit = new JLabel("zeit in sec eingeben: ");
+		Box box = Box.createVerticalBox();
+		JPanel top = new JPanel();
+		JPanel mid = new JPanel();
+		
+		JFormattedTextField form = new JFormattedTextField();
+		
+		top.add(titel);
+		top.add(enterTitel);
+		mid.add(zeit);
+		mid.add(form);
+		box.add(top);
+		box.add(mid);
+		box.add(ok);
+		add(box);
+		
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		pack();
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new NeuerSong();
+	}
+}

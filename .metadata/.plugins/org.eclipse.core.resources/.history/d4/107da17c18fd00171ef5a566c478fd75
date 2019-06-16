@@ -1,0 +1,65 @@
+package Übungen;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class KreiseZeit extends JFrame{
+	private Timer time;
+	private JPanel pan;
+	private int randX;
+	private int randY;
+	private int randZ;
+	private int count;
+	
+	public KreiseZeit() {
+		pan = new JPanel();
+		
+		time = new Timer(10, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				count++;
+				ZufälligeKreise zufall = new ZufälligeKreise();
+				add(zufall);
+				if(count == 50){
+					time.stop();
+				}
+			}
+		});
+		time.start();
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(255, 255);
+		setVisible(true);
+	}
+	
+	/*@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);		
+		time = new Timer(10, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				count++;
+				randX = (int)(Math.random()*255);
+				randY = (int)(Math.random()*255);
+				randZ = (int)(Math.random()*255);
+				g.fillOval(randX, randY, 20, 20);
+				g.setColor(new Color(randX, randY, randZ));
+				if(count == 50){
+					time.stop();
+				}
+			}
+		});
+		time.start();	
+	}*/
+	public static void main(String[] args) {
+		new KreiseZeit();
+	}
+}
